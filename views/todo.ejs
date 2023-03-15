@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <!-- Display Title -->
+    <title>
+        Random Comic Generator
+    </title>
+    <!-- Attach Stylesheets -->
+    <link rel="stylesheet" href="/static/stylesheets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+</head>
+<body>
+    <!-- Create Display Container -->
+    <div class="comic-container">
+        <h1>
+            <!-- Display Comic Title -->
+            <%= "\"" + comicData.safe_title + "\"" %>
+        </h1>
+        <h4>
+            <!-- Display Comic Date -->
+            <%= "Published: " + comicData.month + "/" + comicData.day + "/" + comicData.year %>
+        </h4>
+        <br>
+        <!-- Display Comic -->
+        <img src="<%= comicData.img %>" alt="<%= comicData.alt %>" width="500px" height="500px" />
+    </div>
+</body>
